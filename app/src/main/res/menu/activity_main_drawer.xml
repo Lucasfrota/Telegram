@@ -7,32 +7,45 @@
         <item
                 android:id="@+id/nav_camera"
                 android:icon="@drawable/ic_menu_camera"
-                android:title="Import"/>
+                android:title="New Group"/>
         <item
                 android:id="@+id/nav_gallery"
                 android:icon="@drawable/ic_menu_gallery"
-                android:title="Gallery"/>
+                android:title="New Secret Chat"/>
         <item
                 android:id="@+id/nav_slideshow"
                 android:icon="@drawable/ic_menu_slideshow"
-                android:title="Slideshow"/>
-        <item
-                android:id="@+id/nav_manage"
-                android:icon="@drawable/ic_menu_manage"
-                android:title="Tools"/>
+                android:title="New Channel"/>
     </group>
 
-    <item android:title="Communicate">
+    <group>
         <menu>
             <item
                     android:id="@+id/nav_share"
                     android:icon="@drawable/ic_menu_share"
-                    android:title="Share"/>
+                    android:title="Contacts"/>
             <item
                     android:id="@+id/nav_send"
                     android:icon="@drawable/ic_menu_send"
-                    android:title="Send"/>
+                    android:title="Saved Messages"/>
+
+            <item
+                    android:icon="@drawable/ic_menu_send"
+                    android:title="Calls"/>
+
+            <item
+                    android:icon="@drawable/ic_menu_send"
+                    android:title="Invite Friends"/>
+
+            <item
+                    android:icon="@drawable/ic_menu_send"
+                    android:title="Settings"/>
+
+            <item
+                    android:icon="@drawable/ic_menu_send"
+                    android:title="Telegram FAQ"/>
+
         </menu>
-    </item>
+    </group>
 
 </menu>
