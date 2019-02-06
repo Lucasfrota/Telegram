@@ -1,4 +1,6 @@
 package com.lucasfrota.telegram.Models
 
-class ChatItem {
-}
+class ChatItem(val chatSubject: String,
+               val chatLastMessageSent: String,
+               val ChatSentMessageTimeStamp:String,
+               val chatImage: String)
