@@ -8,9 +8,14 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.lucasfrota.telegram.Adapters.ChatAdapter
+import com.lucasfrota.telegram.Models.ChatItem
 import com.lucasfrota.telegram.R
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
+import kotlinx.android.synthetic.main.content_main.*
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
@@ -33,6 +38,23 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         toggle.syncState()
 
         nav_view.setNavigationItemSelectedListener(this)
+
+        setUpRecyclerView(chatsLista)
+    }
+
+    private fun setUpRecyclerView(chatsLista: RecyclerView) {
+
+        chatsLista.setHasFixedSize(true)
+        chatsLista.layoutManager = LinearLayoutManager(this)
+
+        val itens = ArrayList<ChatItem>()
+
+        itens.add(ChatItem("something", "hahahaha", "12:32", ""))
+        itens.add(ChatItem("Grupo aleatorio", "toma tua merenda", "15:27", ""))
+        itens.add(ChatItem("Discussão sobre ETs", "Eles existem pow", "19:03", ""))
+
+        var adapter = ChatAdapter(itens)
+        chatsLista.adapter = adapter
     }
 
     override fun onBackPressed() {
